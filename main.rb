@@ -1,1 +1,2 @@
-first commit 
+require "./player"
+require "./questions"
