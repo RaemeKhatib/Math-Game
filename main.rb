@@ -15,17 +15,17 @@ until player1.lives == 0 && player2.lives == 0
       puts '---------- NEW TURN ----------'
     end
     question = Question.new
-    puts "Player 1: #{question}"
+    puts "Player 1: #{question.question}"
     print "Enter Answer>"
     answer = gets.chomp.to_i
   if answer == question.answer
-    puts 'Player 1: YES! You are correct.'
+    puts 'Player 1: Boom Baby- Dats Correct!'
       puts "P1: #{player1.lives}/3 vs P2: #{player2.lives}/3"
       player = 2
       count +=1
     else
       player1.lives -=1
-      puts 'Player 1: Seriously? No!'
+      puts 'Player 1: What a Fail! Thats Wrong!'
       puts "P1: #{player1.lives}/3 vs P2: #{player2.lives}/3"
       if player1.lives == 0
         break
@@ -35,4 +35,42 @@ until player1.lives == 0 && player2.lives == 0
     end
 
   end
+
+  if player == 2
+    if count != 0
+      puts '----- NEW TURN -----'
+    end
+question = Question.new
+    puts "player 2: #{question.question}"
+    print "Enter Answer>"
+    answer = gets.chomp.to_i
+    if answer == question.answer
+      puts 'Player 2: Woot Woot Dats Correct.'
+      puts "P1: #{player1.lives}/3 vs P2: #{player2.lives}/3"
+      player = 1
+      count +=1
+    else
+      player2.lives -=1
+      puts 'Player 2: Now Whose Failing? Thats Wrong'
+      puts "P1: #{player1.lives}/3 vs P2: #{player2.lives}/3"
+      if player2.lives == 0
+        break
+      end
+      player = 1
+      count +=1
+    end
+  end
+end
+
+
+if (player1.lives == 0)
+  puts "Player 2 wins with a score of #{player2.lives}/3"
+  puts '----- GAME OVER -----'
+  puts 'Good bye!'
+end
+if(player2.lives == 0)
+  puts "Player 1 wins with a score of #{player1.lives}/3"
+  puts '----- GAME OVER -----'
+  puts 'Good bye!'
+
 end
