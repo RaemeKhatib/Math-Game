@@ -66,11 +66,11 @@ end
 if (player1.lives == 0)
   puts "Player 2 wins with a score of #{player2.lives}/3"
   puts '----- GAME OVER -----'
-  puts 'Good bye!'
+  puts 'Try Another Game! Good bye!'
 end
 if(player2.lives == 0)
   puts "Player 1 wins with a score of #{player1.lives}/3"
   puts '----- GAME OVER -----'
-  puts 'Good bye!'
+  puts 'Try Another Game! Good bye!'
 
 end

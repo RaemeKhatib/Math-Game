@@ -6,8 +6,5 @@ attr_accessor :lives
     @lives = lives
   end
 
-  # def lose
-  #   @lives -= 1
-  # end
 
 end
