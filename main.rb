@@ -1,2 +1,2 @@
 require "./player"
-require "./questions"
+require "./question"
